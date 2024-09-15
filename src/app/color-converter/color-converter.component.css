@@ -1,6 +1,8 @@
 h1 {
     text-align: center;
     height: 100px;
+    color: #ffffff;
+    margin-top: 20px;
 }
 
 h3 {
@@ -8,6 +10,10 @@ h3 {
     width: 100%;
     border-bottom: 2px solid #000;
     padding: 10px 0;
+}
+
+.main {
+    height: 100vh;
 }
 
 .table {
@@ -21,6 +27,7 @@ h3 {
     width: 30%;
     border-radius: 10px;
     height: 400px;
+    background: #fff;
 }
 
 .inputs {
@@ -62,9 +69,20 @@ input[type=number]::-webkit-inner-spin-button {
     flex-direction: column;
 }
 
+.color-container {
+    width: 100%;
+    position: relative;
+    padding: 50px;
+    height: 200px;
+    background: -webkit-linear-gradient(360deg, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0));
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0),rgba(255, 255, 255, 0.5),rgba(0, 0, 0, 0));
+}
+
 #picker {
     width: 20%;
-    display: flex;
+    position: absolute;
+    left: 40%;
+    top: 0;
     justify-self: center;
     align-self: center;
     height: 100px;
@@ -72,6 +90,7 @@ input[type=number]::-webkit-inner-spin-button {
     border: 2px solid #000;
     margin-top: 50px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 @media screen and (max-width: 1050px) {
     .table {

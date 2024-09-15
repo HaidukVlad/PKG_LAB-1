@@ -1,4 +1,4 @@
-<div class="main">
+<div class="main" [style]="{'background': 'linear-gradient(to bottom, #000, ' + color + ')'}">
     <h1> Color Converter</h1>
 
     <div class="table">
@@ -73,13 +73,15 @@
         </div>
     </div>
 
-    <input
-        [(colorPicker)]="color"
-        [style.background]="color"
-        [cpOutputFormat]="'hex'"
-        [cpAlphaChannel]="'disabled'"
-        [cpPosition]="'bottom'"
-        [cpOKButton]="true"
-        (colorPickerChange)="updateHex()"
-        id="picker"/>
+    <div class="color-container">
+        <input
+            [(colorPicker)]="color"
+            [style.background]="color"
+            [cpOutputFormat]="'hex'"
+            [cpAlphaChannel]="'disabled'"
+            [cpOKButton]="true"
+            (colorPickerChange)="updateHex()"
+            id="picker"
+        />
+    </div>
 </div>
