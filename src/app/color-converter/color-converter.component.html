@@ -1,0 +1,85 @@
+<div class="main">
+    <h1> Color Converter</h1>
+
+    <div class="table">
+        <div class="color-column">
+            <h3>CMYK</h3>
+            <form class="inputs" [formGroup]="cmykForm">
+                <div class="input-container">
+                    <label for="range">C</label>
+                    <input type="range" id="range" min="0" max="100" step="1" formControlName="C" (input)="updateCmykValues()" ngModel="{{ cmykForm.get('C')?.value}}">
+                    <input type="number" name="" id="" min="0" max="100" step="1" formControlName="C" (change)="updateCmykValues()" class="numInput">
+                </div>
+                <div class="input-container">
+                    <label for="range">M</label>
+                    <input type="range" id="range" min="0" max="100" step="1" formControlName="M" (input)="updateCmykValues()" ngModel="{{ cmykForm.get('M')?.value}}">
+                    <input type="number" name="" id="" min="0" max="100" step="1" formControlName="M" (change)="updateCmykValues()" class="numInput">
+                </div>
+                <div class="input-container">
+                    <label for="range">Y</label>
+                    <input type="range" id="range" min="0" max="100" step="1" formControlName="Y" (input)="updateCmykValues()" ngModel="{{ cmykForm.get('Y')?.value}}">
+                    <input type="number" name="" id="" min="0" max="100" step="1" formControlName="Y" (change)="updateCmykValues()" class="numInput">
+                </div>
+                <div class="input-container">
+                    <label for="range">K</label>
+                    <input type="range" id="range" min="0" max="100" step="1" formControlName="K" (input)="updateCmykValues()" ngModel="{{ cmykForm.get('K')?.value}}">
+                    <input type="number" name="" id="" min="0" max="100" step="1" formControlName="K" (change)="updateCmykValues()" class="numInput">
+                </div>
+            </form>
+        </div>
+
+        <div class="color-column">
+            <h3>RGB</h3>
+
+            <form class="inputs" [formGroup]="rgbForm">
+                <div class="input-container">
+                    <label for="range">R</label>
+                    <input type="range" id="range" min="0" max="255" step="1" formControlName="R" (input)="onRgbChange()" ngModel="{{ rgbForm.get('R')?.value}}">
+                    <input type="number" name="" id="" min="0" max="255" step="1" formControlName="R" (change)="onRgbChange()" class="numInput">
+                </div>
+                <div class="input-container">
+                    <label for="range">G</label>
+                    <input type="range" id="range" min="0" max="255" step="1" formControlName="G" (input)="onRgbChange()" ngModel="{{ rgbForm.get('G')?.value}}">
+                    <input type="number" name="" id="" min="0" max="255" step="1" formControlName="G" (change)="onRgbChange()" class="numInput">
+                </div>
+                <div class="input-container">
+                    <label for="range">B</label>
+                    <input type="range" id="range" min="0" max="255" step="1" formControlName="B" (input)="onRgbChange()" ngModel="{{ rgbForm.get('B')?.value}}">
+                    <input type="number" name="" id="" min="0" max="255" step="1" formControlName="B" (change)="onRgbChange()" class="numInput">
+                </div>
+            </form>
+        </div>
+
+        <div class="color-column">
+            <h3>HSV</h3>
+
+            <form class="inputs" [formGroup]="hsvForm">
+                <div class="input-container">
+                    <label for="range">H</label>
+                    <input type="range" id="range" min="0" max="360" step="1" formControlName="H" (input)="onHsvChange()" ng ngModel="{{ hsvForm.get('H')?.value}}">
+                    <input type="number" name="" id="" min="0" max="360" step="1" formControlName="H" (change)="onHsvChange()" class="numInput">
+                </div>
+                <div class="input-container">
+                    <label for="range">S</label>
+                    <input type="range" id="range" min="0" max="100" step="1" formControlName="S" (input)="onHsvChange()" ngModel="{{ hsvForm.get('S')?.value}}">
+                    <input type="number" name="" id="" min="0" max="100" step="1" formControlName="S" (change)="onHsvChange()" class="numInput">
+                </div>
+                <div class="input-container">
+                    <label for="range">V</label>
+                    <input type="range" id="range" min="0" max="100" step="1" formControlName="V" (input)="onHsvChange()" ngModel="{{ hsvForm.get('V')?.value}}">
+                    <input type="number" name="" id="" min="0" max="100" step="1" formControlName="V" (change)="onHsvChange()" class="numInput">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <input
+        [(colorPicker)]="color"
+        [style.background]="color"
+        [cpOutputFormat]="'hex'"
+        [cpAlphaChannel]="'disabled'"
+        [cpPosition]="'bottom'"
+        [cpOKButton]="true"
+        (colorPickerChange)="updateHex()"
+        id="picker"/>
+</div>

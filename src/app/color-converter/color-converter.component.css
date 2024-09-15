@@ -1,0 +1,92 @@
+h1 {
+    text-align: center;
+    height: 100px;
+}
+
+h3 {
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid #000;
+    padding: 10px 0;
+}
+
+.table {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.color-column {
+    border: 2px solid #000;
+    width: 30%;
+    border-radius: 10px;
+    height: 400px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.input-container input:first-child {
+    width: 50%;
+}
+
+.numInput {
+    width: 10%;
+    border: none;
+    background: none;
+    font-size: 19px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.input-container label {
+    width: 10%;
+    font-size: 19px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#picker {
+    width: 20%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    height: 100px;
+    border-radius: 20px;
+    border: 2px solid #000;
+    margin-top: 50px;
+    cursor: pointer;
+}
+@media screen and (max-width: 1050px) {
+    .table {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .table {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .color-column {
+        height: 340px;
+    }
+}
