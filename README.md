@@ -1,6 +1,28 @@
 # Color Converter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2 and [ElectronJS](https://github.com/electron/electron)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2 and [ElectronJS](https://github.com/electron/electron) version 32.1.2.
+It allows you to convert colors between different color models such as HEX, RGB, CMYK, and HSL.
+
+## Features
+
+Convert colors between RGB, CMYK, and HSL color models. Choose colors using a color picker dialog. Input and display color values in each color model. Auto handling for invalid input values. Real-time dynamic updates of color values and the background color.
+
+## Usage with application
+
+Follow [this link](https://disk.yandex.ru/d/qQDtVcLRu10N8Q) to Yandex disk and download Setup.exe file. After choosing folder to install application and app name finish installing and open .exe file.
+Now you can use color converter in your personal computer or laptop.
+
+## Color Models
+
+RGB (Red, Green, Blue): This is the most common color model in which colors are represented as combinations of red, green, and blue components.
+
+CMYK (Cyan, Magenta, Yellow, Key/Black): CMYK is a color model used in printing, where colors are represented using percentages of cyan, magenta, yellow, and black.
+
+HSV (Hue, Saturation, Value): HSV is a color model that represents colors based on their hue (color), saturation (intensity), and value.
+
+## Prerequisites
+
+You need to have node.js be installed and about 100Mb free.
 
 ## Development server
 
